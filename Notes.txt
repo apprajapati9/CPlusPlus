@@ -1,0 +1,60 @@
+
+Chapter 3 - Basic Concepts 
+
+1. Compoud types 
+
+A compound types is a type that is composed of other types. (The C language uses the term derived type.). The keywords struct and class identify as compound types. 
+
+C++ requires use of either keyword in the definition of the compound types. ( both struct , and class keyword are valid in c++)
+
+//C style
+struct Transaction {
+    int acct; // account
+    chat type; // thpe c credit d debit
+    double amount; //transaction amount
+}
+
+Forward declaration ; 
+
+struct Transaction; // Forward declaration , it informs the compiler that the type is a valid compound type without defining the type. 
+
+//C++ doesn't require "STRUCT" keyword in prototypes or memory allocations
+
+C++ // 
+
+void enter(Transaction * );
+void display(const Transaction*);
+
+int main(){
+    Transaction tr;
+}
+
+C Version 
+
+void enter(struct Transaction *);
+void display(const struct Transaction*);
+
+int main(){
+    struct Transaction tr;
+}
+
+
+----------------
+"auto" keyword -- declares a variable or object and deduces its type from the type of its initializer.
+
+auto x = 4; // x is of type int 
+auto x = 3.4 // x is type of double 
+
+------------
+
+you can access struct pointer variable using -> operator 
+
+void display ( const Transaction *tr){
+    cout << "account" >> tr->acct << endl; 
+}
+
+--- 
+
+C++ has one definition rule, which means forward declarations or function prototypes can have only one definition, or compiler will throw an compiler error. ( Look chapter3 onedefinition rule explain)
+
+Default parameter value - ( look chapter3 - defaultparam.cpp)

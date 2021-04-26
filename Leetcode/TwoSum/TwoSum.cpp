@@ -9,8 +9,9 @@ vector<int> nums;
 
 class Solution{
 	public:
-		void printVector(vector<int> &v){
+		void printVector(vector<int> &v, string methodName){
 			cout << endl;
+			cout << methodName << "answer:";
 			for ( int x : v){
 				std::cout << x << ", ";
 			}
@@ -29,6 +30,18 @@ class Solution{
 			}
 		}
 
+
+		vector<int> twoSumUsingSorting(vector<int> &nums, int target){
+
+			vector<int> copyVector = nums;
+
+			//for(int i = )
+
+
+			return nums;
+		}
+
+
 		vector<int> efficientTwoSum(vector<int> &nums, int target){
 			//vector<int> answer;
 			map<int, int> umap;
@@ -41,14 +54,11 @@ class Solution{
 					nums.push_back(umap[target-nums[i]]);
 					nums.push_back(i);
 					
-					printMap(umap);
-					printVector(nums);
-					//printVector(nums);
-					printAnswerFormat(nums);
-					return nums;
+					break;
+					//return nums;
 				}
 				else{
-					umap[nums[i]] = i; 
+					umap[nums[i]] = i; // value -> index
 					
 					// index - > value (of vector[i])
 					// ideally idex is unique which should be preferred to store as KEY
@@ -61,12 +71,18 @@ class Solution{
 					//hashmap also automatically sorts <int> keys into sorted order.
 				}
 			}
+
+			printMap(umap);
+			printVector(nums, "efficientTwoSum");
+			//printVector(nums);
+			printAnswerFormat(nums);
+
 			return nums;
 		}
 
 		vector<int> bruteForceTwoSum(vector<int> &nums, int target){
 
-			//vector<int> answer;
+			//printVector()
 
 			for(int i = 0; i <= nums.size(); i++){
 				if(nums[i] + nums[i+1]== target){
@@ -76,15 +92,7 @@ class Solution{
                     break;
 				}
 			}
-
-			// for( int x : nums){
-			// 	cout << endl<< "numbers: " <<x << " ";
-			// }
-
-			// for( int x : answer){
-			// 	cout << "answers: " << x << " ";
-			// }
-		
+			
 			return  nums;
 		}
 
@@ -159,6 +167,8 @@ int main(){
 
 	//cout<< "Bruteforce ANSWER:"<<endl;
 	//cout << "[" << nums.at(0) << "," << nums.at(1) <<"]";
+
+
 
 	mySolution.efficientTwoSum(nums, target);
 

@@ -58,3 +58,24 @@ void display ( const Transaction *tr){
 C++ has one definition rule, which means forward declarations or function prototypes can have only one definition, or compiler will throw an compiler error. ( Look chapter3 onedefinition rule explain)
 
 Default parameter value - ( look chapter3 - defaultparam.cpp)
+
+-------------- HOW TO RUN A PROGRAM IN C++ AND KOTLIN Command prompt ---------------------
+
+C++
+====
+
+To compile: 
+> g++ sourceFile.cpp -o outputFilename
+
+To run:
+> ./outputFilename  
+
+
+Kotlin 
+======
+
+To compile: 
+> kotlinc hello.kt -include-runtime -d hello.jar
+
+To run:
+> java -jar hello.jar  

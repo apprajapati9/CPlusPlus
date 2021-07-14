@@ -79,3 +79,7 @@ To compile:
 
 To run:
 > java -jar hello.jar  
+
+=================
+
+links of useful commands of gcc - https://gcc.gnu.org/onlinedocs/gcc-3.2/gcc/Overall-Options.html#Overall%20Options 

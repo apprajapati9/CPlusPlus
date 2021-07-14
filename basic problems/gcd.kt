@@ -18,7 +18,7 @@ fun main(){
    
    /*
 
-   The HCF or GCD of two integers is the largest integer that can exactly divide both numbers (without a remainder).
+    The HCF or GCD of two integers is the largest integer that can exactly divide both numbers (without a remainder).
 
     Using Euclid's algorithm to solve this.
 
@@ -38,23 +38,11 @@ fun main(){
    */
    print("gcd = ${gcd(high, low)}")
    
-   
-
 }
 
-fun gcdWithoutSubstraction(num1: Int, num2: Int) : Int {
-    var gcd = 0
-    var high = num1
-    var low = num2
-
-    if(high > low){
-        
-    }
-    return gcd
-}
 
 fun gcd (num1: Int, num2: Int) :Int {
-    var gcd: Int
+    var gcd = 0
     var high = num1
     var low = num2
     do{
@@ -66,6 +54,7 @@ fun gcd (num1: Int, num2: Int) :Int {
             gcd = remeinder
         }else{
             gcd = high
+
         }
 
     }while(remeinder != 0)

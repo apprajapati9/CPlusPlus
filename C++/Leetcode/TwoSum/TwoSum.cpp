@@ -19,26 +19,17 @@
 
 			void printAnswerFormat(vector<int> &v){ //assuming only have to print two indexes
 				//for (int i =0; i < v.size(); i++){
+				cout << endl;
 				cout << "answer: element num = [" << v[0] << "," << v[1] << "]" << endl;
 				
 			}
 
 			void printMap(map<int, int> &m){
+				cout << "Printing Map....";
 				cout << endl;
 				for (auto i : m){
 					cout << "key: " << i.first << " value: " << i.second << endl;
 				}
-			}
-
-
-			vector<int> twoSumUsingSorting(vector<int> &nums, int target){
-
-				vector<int> copyVector = nums;
-
-				//for(int i = )
-
-
-				return nums;
 			}
 
 
@@ -51,15 +42,13 @@
 					if(umap.find(target - nums[i]) != umap.end()){
 						
 						nums.resize(0);
-						nums.push_back(umap[target-nums[i]]);
+						nums.push_back(umap[target-nums[i]]); //umap[id] gives value
 						nums.push_back(i);
-						
-						break;
-						//return nums;
+						return nums;
+						//
 					}
 					else{
 						umap[nums[i]] = i; // value -> index
-						
 						// index - > value (of vector[i])
 						// ideally idex is unique which should be preferred to store as KEY
 						//, however, hashmap automatically removes duplicates key, 
@@ -76,7 +65,6 @@
 				printVector(nums, "efficientTwoSum");
 				//printVector(nums);
 				printAnswerFormat(nums);
-
 				return nums;
 			}
 
@@ -93,6 +81,8 @@
 					}
 				}
 				
+				printVector(nums, "BruteForceTwoSum");
+				printAnswerFormat(nums);
 				return  nums;
 			}
 
@@ -157,23 +147,10 @@
 				nums.push_back(input);
 		}
 		
-		//to print all elements of vector
-		// for ( int x : nums){
-		// 	std::cout << x << ", ";
-		// }
-
 		Solution mySolution;
-		//mySolution.bruteForceTwoSum(nums, target);
-
-		//cout<< "Bruteforce ANSWER:"<<endl;
-		//cout << "[" << nums.at(0) << "," << nums.at(1) <<"]";
-
-
 
 		mySolution.efficientTwoSum(nums, target);
-
-		
+		mySolution.bruteForceTwoSum(nums, target);		
 
 		return 0;
 	}
-

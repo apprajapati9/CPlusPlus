@@ -8,4 +8,7 @@ class Node {
 
         void insertAfterNode(Node *prev_node, int new_data);
         void insertNodeAtEnd(Node **head_node, int new_data);
+
+        void deleteNode(Node **node, int new_data);
+        void deleteLastNode( Node **head);
 };

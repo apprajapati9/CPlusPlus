@@ -25,15 +25,39 @@ int main(){
 
     cout<< "Original List " << endl;
     head->printList(head);
+    // 1 2 3
 
     head->addNode(&head, 45);
     head->printList(head);
+    // 45 1 2 3
 
     head->insertAfterNode(second, 9);
     head->printList(head);
+    // 45 1 2 9 3
 
     head->insertNodeAtEnd(&head, 40);
     head->printList(head);
+    // 45 1 2 9 3 40
    
+    head->deleteNode(&head,9);
+    head->printList(head);
+    // 45 1 2 3 40
+
+    head->addNode(&head, 50);
+    head->printList(head);
+    // 50 45 1 2 3 40
+
+    head->insertNodeAtEnd(&head, 30);
+    head->printList(head);
+    // 50 45 1 2 3 40 30
+
+    head->deleteNode(&head,2);
+    head->printList(head);
+    // 50 45 1 3 40 30
+
+    head->deleteLastNode(&head);
+    head->printList(head);
+    // 50 45 1 3 40 
+
     return 0;
 }

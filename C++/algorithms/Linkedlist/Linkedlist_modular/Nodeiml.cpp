@@ -1,5 +1,5 @@
 #include "Node.h"
-#include <cstddef>
+#include <cstddef> //For constants like NULL. 
 #include <iostream>
 
 using namespace std;
@@ -109,4 +109,58 @@ void Node::insertNodeAtEnd(Node** head_reference, int new_data){
     //making it the last node. 
     last_node->next = new_node;
 
+}
+
+/*
+    Key will identify which node to delete. 
+    Iterate through all nodes until we find Key in nodes. 
+*/
+void Node::deleteNode(Node **head_node, int data_key){
+
+    Node *temp_node = *head_node;
+    Node *prev = NULL;
+
+    if(temp_node != NULL && temp_node->data == data_key){
+        *head_node = temp_node->next;
+        delete temp_node;
+        return;
+    }else{
+        while(temp_node != NULL && temp_node->data != data_key){
+            prev = temp_node;
+            temp_node = temp_node->next;
+        }
+    }
+
+    if(temp_node == NULL){
+        return;
+    }
+
+    prev->next = temp_node->next; 
+    delete temp_node;
+}
+/*
+    This will delete the last node of linked list
+*/
+void Node::deleteLastNode(Node **head){
+
+    Node *head_temp = *head;
+    Node *prev_node = NULL;
+
+    if(head_temp == NULL){
+        cout<< "Empty Linked list.";
+    }
+
+    if(head_temp->next == NULL){
+        delete head_temp;
+        delete *head;
+    }
+    else{
+        while(head_temp->next != NULL){
+            prev_node = head_temp;
+            head_temp = head_temp->next;
+        }
+    }
+
+    prev_node->next = NULL;
+    delete head_temp;
 }

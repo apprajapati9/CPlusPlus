@@ -44,8 +44,8 @@
 						nums.resize(0);
 						nums.push_back(umap[target-nums[i]]); //umap[id] gives value
 						nums.push_back(i);
-						return nums;
-						//
+						break;
+						//return nums;
 					}
 					else{
 						umap[nums[i]] = i; // value -> index

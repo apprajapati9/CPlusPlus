@@ -70,6 +70,11 @@ To compile:
 To run:
 > ./outputFilename  
 
+While compiling multiple Cpp and header files, remember one definition rule.
+If main has included impl.cpp file then no need to add it while compiling that file.
+i.e. g++ Node.cpp NodeImpl.cpp NodeMain.cpp
+in this case, NodeMain.cpp has included header file NodeImpl thus no need to compile that.
+it should be,  "g++ Node.cpp NodeMain.cpp -o app" only.
 
 Kotlin 
 ======

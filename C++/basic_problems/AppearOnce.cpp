@@ -50,9 +50,15 @@ int main(){
 
     int counter = 0;
     for(int i=0; i < arraysize; i++){
+        cout << "i=" << array[i] <<endl;
         for(int j=0; j < arraysize; j++){
+            cout << "j="<< array[j] <<endl;
             if(array[i] == array[j]){
                 counter++;
+                if(counter > 1){
+                    break;  
+                    //limits full iteration of array if already found more than once 
+                }
             }
         }
         if(counter == 1){

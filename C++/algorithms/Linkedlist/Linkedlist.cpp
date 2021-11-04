@@ -27,6 +27,10 @@ void addNode(Node** head_reference, int new_data){
 
     new_node->data = new_data;
 
+    cout <<" head" << head_reference << endl;
+    cout <<" head deref " << (*head_reference) << endl;
+    cout << "next new node " << new_node <<endl;
+
     new_node->next = (*head_reference);
 
     (*head_reference) = new_node;
@@ -68,6 +72,9 @@ int main(){
     third->data = 3;
     third->next = NULL;
 
+    cout << "Address of head= " << &head << endl;; 
+    cout <<" head =" << head << endl;
+
     cout<< "Original List " << endl;
     printList(head);
 
@@ -79,6 +86,5 @@ int main(){
     addNode(&head, 5);
     cout<< "Push() = 5" << endl;
     printList(head);
-
     return 0;
 }

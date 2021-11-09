@@ -27,9 +27,7 @@ void change(int ** x, int * z){
 
 }
 
-int main()
-{
-
+void p2p_using_function(){
     int c = 1;
     int d = 2;
     int e = 3;
@@ -99,7 +97,48 @@ int main()
     //pp is **p = &a; --- so below are the same.
     //change(pp, f);  is same as passing.... change(&a, f);
     //hope that clears up. 
+}
 
+void p2p_simple_example(){
+    int x = 55;
+    int *p = &x;
+
+    *p = 66; //changes the value of x
+
+    int ** q = &p;  //can only store a pointer inside a pointer to a pointer
+    int ***r = &q; // can only store pointer to a pointer inside a pointer to a pointer to a pointer.
+
+    cout << "Address value of p= " << p << endl; // address of x
+    cout << "Address value of x= " << &x << endl; // addresss of x
+    
+    cout << "Value stored at p= " << *p << endl; // 66
+    cout << endl;
+
+    cout << "Value stored at *q= " << *q << endl; // address of pointer p, so in other words &(*p)
+    cout <<endl;
+
+    cout << "Value stored at **q= " << *(*q) << endl; // 66
+    cout << endl;
+
+    cout << "Value stored at **r= " << *(*r) << endl ; //address of a pointer q. 
+    cout <<endl;
+
+    cout << "Value stored at ***r= " << *(*(*r)) << endl; // 66
+    //you can simply type ***r, but brackets are for understanding precendence.
+    ***r = 9;
+    cout << "After performing ***r = 9; operation" << endl;
+    cout << "Value stored at x= " << x << endl; // 66
+
+    **q = *p +2 ;
+    cout << "output of **q = *p + 2; which changes x = " << x << endl;
+
+}
+
+int main()
+{
+    p2p_using_function();
+    cout << "---------------------Simple example-----------------" << endl;
+    p2p_simple_example();
     return 0;
 }
 

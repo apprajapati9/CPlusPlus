@@ -19,7 +19,7 @@ void pointer_and_array(){
     // *a = values.. dereferencing. 
 }
 
-/* "int *array" or int array[] .. its the same as function args */
+/* "int *array" or "int array[]" .. its the same as function args */
 int SumOfElements(int array[], int size){ /*
     you must pass size when you are passing an array as an argument
     when you pass array, it passes pointer of array[0], so 
@@ -98,6 +98,7 @@ void basic_pointers(){
 
 int main(){
 
+    //cout << "----- Basic pointers -------" << endl;
     //basic_pointers();
 
     //cout << "----- Pointer and arrays concept -------" << endl;
@@ -113,6 +114,7 @@ int main(){
 
 /* NOTE 
 -------->To understand individually, please comment other functions call
+        each function in main has it's own purpose and example.
 --------> There's note and a warning when you run this program,
         it is for understanding purpose so ignore warning and run the executable after compiling.
 */

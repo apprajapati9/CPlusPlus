@@ -178,6 +178,45 @@ bool anagramUsingOneMap(string str1, string str2){
     return map.size() == 0;
 }
 
+bool isAnagramAuto(string s1, string s2) {
+    unordered_map<char, int> m1, m2;
+
+    for(auto i:s1){
+        m1[i]++;
+    }
+
+    for(auto i:s2){
+        m2[i]++;
+    }
+    return m1==m2;
+}
+
+
+#define TOTAL_CHARS 256
+bool bruteForceAnagrams(string str1, string str2){
+    int count[TOTAL_CHARS] = {0}; //initializes an array of 256 ints with 0s.
+    int i;
+
+    //anagram - nagaram
+    // str1[i] && str2[i] = checks if there's some value in both.
+    for(i=0; str1[i] && str2[i]; i++){
+        count[str1[i]]++;
+        //cout << count[str1[i]] << endl; // to debug / understand
+        count[str2[i]]--;
+        //cout << count[str2[i]] << endl;  // to debug/understand
+    }
+
+    if(str1[i] || str2[i]){
+        return false;
+    }
+
+    for(i = 0; i< TOTAL_CHARS; i++){
+        if(count[i])  //This will check based on 0 or 1. 1 being true, 0 being false, so if there's 1, it will execute to return false.
+            return false;
+    }
+    return true;
+}
+
 /*
 Testcase strings..
 
@@ -206,7 +245,7 @@ int main(){
     std::cout << "Enter seconnd string : " <<endl ;
     std::cin >> str2;
 
-    if(anagramUsingOneMap(str1, str2)){
+    if(bruteForceAnagrams(str1, str2)){
         cout << "Anagrams..." <<endl;
     }else{
         cout << "Not Anagrams..." << endl;

@@ -60,9 +60,15 @@ int  Node::addTwoNumbers(Node* n1, Node* n2){
             n2data = n2->data;
         }
 
-        sum = n1data + n2data;
-    
-        if(sum/10 >= 1){
+        if(carry){
+            sum = n1data + n2data + 1;
+            carry = false;
+            
+        }else{
+            sum = n1data + n2data;
+        }
+            
+        if(sum/10 >= 1 && n1->next !=NULL && n2->next != NULL){
             carry = true;
             sum = sum%10;
             sums.push_back(sum);

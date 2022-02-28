@@ -23,13 +23,13 @@ int main(){
     second = new Node();
     third = new Node();
     
-    head->data = 2;
+    head->data = 9;
     head->next = second;
 
-    second->data = 4;
+    second->data = 9;
     second->next = third;
 
-    third->data = 3;
+    third->data = 9;
     third->next = NULL;
 
     Node* head1 = NULL;
@@ -41,13 +41,13 @@ int main(){
     second1 = new Node();
     third1 = new Node();
     
-    head1->data = 5;
+    head1->data = 4;
     head1->next = second1;
 
     second1->data = 6;
     second1->next = third1;
 
-    third1->data = 4;
+    third1->data = 5;
     third1->next = NULL;
 //*/
     cout<< "Original List " << endl;

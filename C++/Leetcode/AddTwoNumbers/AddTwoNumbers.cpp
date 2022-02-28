@@ -3,17 +3,17 @@
 // using namespace std;
 
 int main(){
-    // vector<int> node1 = {2,4,3};
-    // vector<int> node2 = {5,6,4};
+    vector<int> node1 = {9,9,9};
+    vector<int> node2 = {5,6,4};
 
 
-    // Node* vHead1 = NULL;
-    // Node* vHead2 = NULL;
+    Node* vHead1 = NULL;
+    Node* vHead2 = NULL;
 
-    // head1->VectorToNode(head1, node1);
-    // head2->VectorToNode(head2, node2);
+    vHead1 = vHead1->VectorToNode(node1);
+    vHead2 = vHead2->VectorToNode(node2);
 
-///*
+/*
     Node* head = NULL;
     Node* second = NULL;
     Node* third = NULL;
@@ -41,20 +41,26 @@ int main(){
     second1 = new Node();
     third1 = new Node();
     
-    head1->data = 4;
+    head1->data = 9;
     head1->next = second1;
 
-    second1->data = 6;
+    second1->data = 9;
     second1->next = third1;
 
-    third1->data = 5;
+    third1->data = 9;
     third1->next = NULL;
-//*/
-    cout<< "Original List " << endl;
-    head->printNode(head);
-    head1->printNode(head1);
 
-    head1->addTwoNumbers(head, head1);
+    // cout<< "Original List " << endl;
+    // head->printNode(head);
+    // head1->printNode(head1);
+
+    // head1->addTwoNumbers(head, head1);
+*/
+    cout<< "Original List " << endl;
+    vHead1->printNode(vHead1);
+    vHead2->printNode(vHead2);
+
+   // vHead1->addTwoNumbers(head, head1);
     
     return 0;
 }

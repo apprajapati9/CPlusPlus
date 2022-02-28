@@ -122,23 +122,25 @@ int  Node::addTwoNumbers(Node* n1, Node* n2){
     return 0;
 }
 
-// Node* Node::VectorToNode(Node** head, vector<int> &v){
+Node* Node::VectorToNode(vector<int> &v){
     
-//     for(int x: v){
-//         Node* new_node = new Node();
-//         new_node->data = x;
-//         new_node->next = NULL;
+    
+    Node *root = NULL;
+    for(int x: v){
+        Node* new_node = new Node();
+        new_node->data = x;
+        new_node->next = NULL;
 
-//         Node* temp_node = *head;
+        Node* temp_node = root;
 
-//         if(*head == NULL){
-//             *head = new_node;
-//         }else{
-//             while(temp_node->next != NULL){
-//                 temp_node = temp_node->next;
-//             }
-//             temp_node->next = new_node;
-//         }
-//     }
-//     return head* ;
-// }
+        if(root == NULL){
+            root = new_node;
+        }else{
+            while(temp_node->next != NULL){
+                temp_node = temp_node->next;
+            }
+            temp_node->next = new_node;
+        }
+    }
+    return root ;
+}

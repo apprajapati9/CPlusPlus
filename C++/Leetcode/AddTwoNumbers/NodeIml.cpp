@@ -18,112 +18,67 @@ void Node::printNode(Node* n){
     std::cout <<"]"<<endl;
 }
 
-// void Node::insertNode(Node** head){
+void Node::printReverse(Node* n){
+    
+    if(n == NULL){
+        return;
+    }  
+    Node::printReverse(n->next);
+    
+    cout << n->data;
+}
 
-//     Node *new_node = new Node();
-//     Node *last_node = *head;
-//     new_node->data = data;
-//     new_node->next = NULL;
+Node*  Node::addTwoNumbers(Node* n1, Node* n2){
 
-//     if(*head == NULL){
-//         *head = new_node;
-//         return;
-//     }
-
-//     while(last_node->next != NULL){
-//         last_node = last_node->next; 
-//     }
-//     last_node->next = new_node;
-// }
-
-
-int  Node::addTwoNumbers(Node* n1, Node* n2){
-
-    bool carry = false;
+    int carry = 0; 
     int sum;
+    Node* new_node = NULL;
     vector<int> sums;
-
-    Node* head = new Node(); 
 
     while(n1 != NULL || n2 != NULL){
        
-        Node *new_node = new Node();
         int n1data, n2data;
-        if(n1 == NULL){
-            n1data = 0;
-        }else{
-            n1data = n1->data;
-        }
-         if(n2 == NULL){
-            n2data = 0;
-        }else{
-            n2data = n2->data;
-        }
+        
+        n1data = n1 == NULL ? 0 : n1->data;
+        n2data = n2 == NULL ? 0 : n2->data;
 
-        if(carry){
-            sum = n1data + n2data + 1;
-            carry = false;
+        // cout<< "n1: " << n1data<<endl;
+        // cout<< "n2: " << n2data<<endl;
+       // cout<< "sum: " << sum<<endl;
+
+        sum = carry==1 ? n1data + n2data + 1 : n1data + n2data;
+        carry = 0;
+        // cout<< "sum-carry: " << sum<<endl;
             
-        }else{
-            sum = n1data + n2data;
-        }
-            
-        if(sum/10 >= 1 && n1->next !=NULL && n2->next != NULL){
-            carry = true;
+        if(sum/10 >= 1 && n1!= NULL && n1->next != NULL){
+            carry = 1;
             sum = sum%10;
+            // cout<< "sum-if: " << sum<<endl;
+
             sums.push_back(sum);
         }else{
-            if(carry){
-                sums.push_back(sum+1);
-                carry = false;
-            }else{
-                sums.push_back(sum);
-            }
-            
+            sums.push_back(sum);
+            // cout<< "sum-else: " << sum<<endl;
         }
-        n1 = n1->next;
-        n2 = n2->next;
-        //head->insertNode(&new_node);
+        //make sure to check non null value otherwise it could cause seg fault.
+        if(n1 != NULL) n1 = n1->next;
+        if(n2 != NULL) n2 = n2->next;
     }
 
-    Node* new_node = NULL;
-    
-    
-    for(int i=sums.size()-1; i <= sums.size(); i-- ){
+    for(int i = sums.size()-1; i< sums.size(); i--){
         
-        Node* temp_node = new Node();
-        Node* last_node = new_node;
-
-        temp_node->data = sums[i];
-        temp_node->next = NULL;
-
-        if(new_node == NULL){
-            new_node = temp_node;
+        if(sums[i]/10 >= 1){
+            new_node->insert(&new_node, sums[i]/10);
+            new_node->insert(&new_node, sums[i]%10);
         }else{
-            while( last_node->next != NULL){
-                last_node = last_node->next;
-            }
-
-            last_node->next = temp_node;
+            new_node->insert(&new_node, sums[i]);
         }
-        
-        // std::cout << sums[i] << ", ";
-        // new_node->data = sum[i];
-        // new_node-next = NULL;
-    }
-
-    new_node->printNode(new_node);
-
-
-    // for ( int x : sums){
-	// 	std::cout << x << ", ";
-	// }
-
-    return 0;
+    }    
+    
+    return new_node;
 }
 
 Node* Node::VectorToNode(vector<int> &v){
-    
     
     Node *root = NULL;
     for(int x: v){
@@ -143,4 +98,23 @@ Node* Node::VectorToNode(vector<int> &v){
         }
     }
     return root ;
+}
+
+void Node::insert(Node** head, int data){
+
+    Node* new_node = new Node();
+    Node* temp;
+
+    new_node->data = data;
+    new_node->next = NULL;
+
+    if(*head == NULL){
+        *head = new_node;
+    }else{
+        temp = *head;
+        while(temp->next != NULL){
+            temp = temp->next;
+        }
+        temp->next = new_node;
+    }
 }

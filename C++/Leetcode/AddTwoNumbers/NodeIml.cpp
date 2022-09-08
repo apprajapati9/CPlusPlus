@@ -57,12 +57,6 @@ Node*  Node::addTwoNumbers(Node* n1, Node* n2){
         if(n2 != NULL) n2 = n2->next;
     }
 
-    //To print vectors to examine.
-    // for(int v: sums) {
-    //     cout << v << endl;
-    // }
-    // cout << "end of sums" << endl;
-
     for(int i = sums.size()-1; i< sums.size(); i--){
         
         if(sums[i]/10 >= 1){

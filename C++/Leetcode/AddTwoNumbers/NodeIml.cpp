@@ -57,7 +57,7 @@ Node*  Node::addTwoNumbers(Node* n1, Node* n2){
         if(n2 != NULL) n2 = n2->next;
     }
 
-    for(int i = sums.size()-1; i< sums.size(); i--){
+    for(int i = 0; i< sums.size(); i++){
         
         if(sums[i]/10 >= 1){
             new_node->insert(&new_node, sums[i]/10);

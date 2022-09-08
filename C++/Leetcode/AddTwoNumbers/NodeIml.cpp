@@ -35,35 +35,33 @@ Node*  Node::addTwoNumbers(Node* n1, Node* n2){
     Node* new_node = NULL;
     vector<int> sums;
 
-    while(n1 != NULL || n2 != NULL){
-       
-        int n1data, n2data;
+    while(n1 != NULL || n2 != NULL || carry == 1){ // carry ==1 condition prevents last digits scenario where 10 is remainder.
         
-        n1data = n1 == NULL ? 0 : n1->data;
-        n2data = n2 == NULL ? 0 : n2->data;
-
-        // cout<< "n1: " << n1data<<endl;
-        // cout<< "n2: " << n2data<<endl;
-       // cout<< "sum: " << sum<<endl;
+        int n1data = n1 ? n1->data : 0; // better than n1 == NULL? 0 : val
+        int n2data = n2 ? n2->data : 0;
 
         sum = carry==1 ? n1data + n2data + 1 : n1data + n2data;
         carry = 0;
-        // cout<< "sum-carry: " << sum<<endl;
             
-        if(sum/10 >= 1 && n1!= NULL && n1->next != NULL){
+        if(sum/10 >= 1){
             carry = 1;
-            sum = sum%10;
-            // cout<< "sum-if: " << sum<<endl;
+            sum = sum%10; // remainder
 
             sums.push_back(sum);
+        
         }else{
             sums.push_back(sum);
-            // cout<< "sum-else: " << sum<<endl;
         }
         //make sure to check non null value otherwise it could cause seg fault.
         if(n1 != NULL) n1 = n1->next;
         if(n2 != NULL) n2 = n2->next;
     }
+
+    //To print vectors to examine.
+    // for(int v: sums) {
+    //     cout << v << endl;
+    // }
+    // cout << "end of sums" << endl;
 
     for(int i = sums.size()-1; i< sums.size(); i--){
         

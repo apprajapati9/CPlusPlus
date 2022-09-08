@@ -3,8 +3,12 @@
 // using namespace std;
 
 int main(){
-    vector<int> node1 = {2,4,3};
-    vector<int> node2 = {5,6,4};
+    //test cases
+        //vector<int> node1 = {2,4,9};
+        //vector<int> node2 = {5,6,4,9};
+
+        vector<int> node1 = {9,9,9,9,9,9,9};
+        vector<int> node2 = {9,9,9,9};
 
     Node* vHead1 = NULL;
     Node* vHead2 = NULL;

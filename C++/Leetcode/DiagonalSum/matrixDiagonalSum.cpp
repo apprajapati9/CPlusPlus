@@ -82,6 +82,5 @@ int main()
     cout << "Diagonal Sum=" << diagonalSumSingleTraverse(mat) << endl;
     cout << "Diagonal Sum=" << diagonalSumSingleTraverse(mat2) << endl;
     cout << "Diagonal Sum=" << diagonalSumSingleTraverse(mat3) << endl;
-    ;
     cout << endl;
 }

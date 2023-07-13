@@ -2,6 +2,21 @@
 
 using namespace std;
 
+/*
+9. Leetcode - Palindrome number
+Given an integer x, return true if x is a palindrome and false otherwise.
+
+Examples: 
+Input : x= 121 
+output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+
+Input: x = 10
+Output: false.
+
+Follow up question: Do it without convering number to a string. 
+*/
+
 void reverseString(string &str)
 {
     int length = str.length();

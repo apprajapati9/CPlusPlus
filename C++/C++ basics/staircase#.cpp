@@ -130,7 +130,13 @@ void progressiveStaircaseLeft(int number)
     //     cout << endl;
     // }
 }
-
+/*
+     #
+    ###
+   #####
+  #######
+ #########
+*/
 // Proud to have it done myself. I= row, J=column.
 void pyramid(int number)
 {

@@ -2,6 +2,21 @@
 
 using namespace std;
 
+/*
+9. Leetcode - Palindrome number
+Given an integer x, return true if x is a palindrome and false otherwise.
+
+Examples: 
+Input : x= 121 
+output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+
+Input: x = 10
+Output: false.
+
+Follow up question: Do it without convering number to a string. 
+*/
+
 bool isPalindrome(int number)
 {
     if (number < 0 || number != 0 && number%10 == 0)
@@ -56,14 +71,13 @@ bool isPalindromeByDivision(int number){
     while(number >= 10*div){
         div *= 10;  //To find base of 10 in order to get first digit.
     }
-    //cout << "div=" << div <<endl;
 
     while(number > 0) {
         if(number % 10 != number / div)
             return false;
 
         number = (number%div) / 10; 
-        // (n%div) gives us remainder. essentially getting remainder and then dividing to get last digit
+        // (n%div) gives us remainder. essentially getting remainder and then dividing to discard the last digit
         div /= 100;
     }
     return true;

@@ -92,3 +92,9 @@ links of useful commands of gcc - https://gcc.gnu.org/onlinedocs/gcc-3.2/gcc/Ove
 =================
 
 Alt+shift+F = Format code on Windows in VSC. 
+
+=================
+
+echo -e ${PATH//:/\\n}   --> to print all paths with newline in Windows 
+which g++   --> To find set path of a particular command
+

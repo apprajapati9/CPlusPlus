@@ -68,7 +68,7 @@ bool isPalindromeByDivision(int number){
         return false;
 
     int div = 1;
-    while(number >= 10*div){
+    while(number >= 10*div){ //Multiplying by 10 and if number is greater than it means that you have more digits
         div *= 10;  //To find base of 10 in order to get first digit.
     }
 

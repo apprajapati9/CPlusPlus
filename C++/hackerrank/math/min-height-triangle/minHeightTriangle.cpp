@@ -7,9 +7,8 @@ Input: base=4, and area =6
 answer= 3
 
 Thoughts:
-
-Formula needed is triangle area. A=1/2*b*h.
-From this formula we have base and area but not h. 
+Formula needed is triangle area. Area =1/2*b*h.
+From in this problem, we have base and area but not h. 
 
 So we can find height by the equation - Height = 2A/base
 and similarly Base = 2A/height

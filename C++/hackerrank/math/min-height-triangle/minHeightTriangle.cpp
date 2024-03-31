@@ -21,6 +21,8 @@ int findHeight(int base, int area){
     //Simple formula is 2A/BASE but problem states we have to return integer
     //so to round up we are adding same amount of base to inflate area which will give us 
     //rounded down value by default in int.
+    //The trick is to add exactly the same amount in area but -1 so it will inflate by 1 only,
+    //thus 11.76 (approx) will be rounded up to 12.76 and int will print only 12 (which is the right answer)
 }
 
 int main(){

@@ -24,4 +24,7 @@ int main(){
      for (int i = 0; i < 5; i++){
         cout << "heap= " << heapPointer[i] << endl; //remember in arrays dereferencing doesn't require *
     }
+
+    //delete[] heapPointer; //c language
+    free(heapPointer);
 }

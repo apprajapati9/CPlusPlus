@@ -12,7 +12,7 @@ void swapByAdd(int *x, int *y){
 
 //This is monolithic code, this will be pasted inside main function as compared to pointer 
 //which is efficient because accessing variable using pointer. 
-void swapByRef(int &x, int &y){
+void swapByRef(int &x, int &y){ //kind of like an inline function. It may also depend on the compiler how it chooses to optimize, might convert into a pointer as well.
     int temp = 0;
     temp = x;
     x = y;

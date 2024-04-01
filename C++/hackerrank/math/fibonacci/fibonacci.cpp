@@ -46,9 +46,26 @@ void print_fibo(){
     }
 }
 
+unsigned long fib(unsigned long n){
+        if(n <=1){
+            return n;
+        }
+        else{
+            return fib(n - 1) + fib(n - 2);  //fn = Fn-1 + Fn-2 where F represents Function call.
+        }
+}
+
+void using_equation(){
+    for (int n = 0; n < 20; n++)
+    {
+        cout << fib(n) << " ";
+    }
+}
+
 int main(){
 
-    print_fibo();
+    //print_fibo();
+    using_equation();
     return 0;
 }
 

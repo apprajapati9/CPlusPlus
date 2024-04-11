@@ -81,7 +81,7 @@ int main(){
     for (int i = 1; i <= n; i++) {
         if(isPrime(i)){
             product *= i;
-            if(product < n || product == n){
+            if(product < n || product == n){ //product==n -> specifically for number 2 edge case.
                 counter++;
             }else{
                 break;
@@ -94,7 +94,7 @@ int main(){
 }
 
 /*
-Explanation of this problem: HackerRank
+Explanation of this problem: HackerRank - Leonardo's Prime Factors
 
 Given number Q, as input indicating how many numbers to check. 
 Based on Q, that many integers N are entered. 

@@ -166,6 +166,20 @@ void pyramid(int number)
     }
 }
 
+void stairRecursion(int n)
+{
+    if (n <= 0)
+    {
+        return;
+    }
+    stairRecursion(n - 1);
+    for (int i = 0; i < n; i++)
+    {
+        cout << "#";
+    }
+    cout << endl;
+}
+
 int main()
 {
 
@@ -180,6 +194,9 @@ int main()
 
     pyramid(5);
     cout << endl;
+
+    cout << "------------" << endl;
+    stairRecursion(5);
 
     return 0;
 }

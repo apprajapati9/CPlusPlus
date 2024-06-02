@@ -47,7 +47,13 @@ void find_factors(int n){
         cout << factors[10][i] << endl;
     }
 }
+/*
+Note about sqrt() ceiling to check prime=> Carmichael numbers like 561, are a rare type of composite numbers that exhibit a peculiar property
+and they can pass tests like trial division (ie utilizes the square root check) and give wrong 
+result by identifying it as a prime, when its not.
 
+ceiling being square root of N, gives high probability but not foolproof.
+*/
 bool isPrime(int n){
     //corner case
     if(n <= 1){

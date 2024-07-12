@@ -94,3 +94,71 @@ int main()
 
     return 0;
 }
+
+/* practice test myself.
+
+#include <iostream>
+
+using namespace std;
+
+
+
+int* merge(int* a, int start, int end, int m){
+ 
+    cout << "start, end-> " << "(" << a[start] << "," << a[end] << ")" << ", m-" << a[m] << endl;
+    
+    // cout << "start, end-> " << "(" << a[start] << "," << a[end] << ")" << ", m-" << a[m] << endl;
+    if(a[start] > a[end]){
+        int temp = a[start];
+        a[start] = a[end];
+        a[end] = temp;
+    }
+    
+    // cout << "array print-> " << endl;
+    // for(int i=start; i<end; i++){
+    //     cout << a[i] << ",";
+    // }
+    // cout << endl;
+    
+    
+    return a;
+   // break;
+}
+
+void mergeSort(int arr[], int start, int end){
+  
+  if(start < end){
+    int middle = start + (end-start)/2;// 5+(9-5)/2 = 5+4/2=4
+  
+  //cout << "start ->" << start << endl;
+  //cout << "middle-> " << middle << endl;
+ // cout << "end ->" << end << endl;
+  //cout << "---------------------left" << endl;
+  mergeSort(arr, start, middle);
+  //cout << "---------------------right" << endl;
+  mergeSort(arr, middle+1, end);
+
+    merge(arr, start, end, middle);
+  }
+  
+}
+
+int main()
+{
+    int arr[] = {70,50,30,10,20,60,40}; //{1,5,4,3,10,2,6,7,9,8}; // 9 items *  4 bytes- 36 sizeof
+    
+    int size = sizeof(arr)/sizeof(int); //sizeof gives size in bytes.
+    cout<< "size-> " << size << endl;
+    mergeSort(arr,0, size-1);
+    
+     //cout << "array print-> " << endl;
+    for(int i=0; i<size; i++){
+        cout << arr[i] << ",";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
+*/

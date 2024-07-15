@@ -98,3 +98,20 @@ Alt+shift+F = Format code on Windows in VSC.
 echo -e ${PATH//:/\\n}   --> to print all paths with newline in Windows 
 which g++   --> To find set path of a particular command
 
+Key bindings track:
+
+Firefox
+    Alt + <-- / -->  || To go backward in visted pages history - firefox 
+    Ctrl + tab -> switch between tabs
+    Ctrl + L  - jump to address bar -- Ctrl + E - search 
+
+
+VSC
+     Alt + <-- / -->  || jump between opened files  - more like going back , 
+     Ctrl+tab for jump between opened files, add shift if wanna go in different order from last to first
+     Ctrl + `    = open terminal , Ctrl + shift + `  --> open new terminal 
+     Ctrl+ shift+ p  -> Command pallete
+     Ctrl + P -> search file names.
+     Ctrl + shift + k  , Ctrl+x  -> delete line 
+     
+

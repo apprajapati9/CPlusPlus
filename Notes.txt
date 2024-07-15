@@ -113,5 +113,5 @@ VSC
      Ctrl+ shift+ p  -> Command pallete
      Ctrl + P -> search file names.
      Ctrl + shift + k  , Ctrl+x  -> delete line 
-     
+     Ctrl + shift + v  - paste code without format.
 

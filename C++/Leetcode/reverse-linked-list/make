@@ -1,0 +1,9 @@
+all: run
+
+run: m
+	./m.exe
+m: reverse-linked-list.cpp
+	g++ reverse-linked-list.cpp -o m 
+
+clean: 
+	rm -f *.exe

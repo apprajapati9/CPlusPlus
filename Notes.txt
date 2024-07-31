@@ -107,11 +107,31 @@ Firefox
 
 
 VSC
-     Alt + <-- / -->  || jump between opened files  - more like going back , 
-     Ctrl+tab for jump between opened files, add shift if wanna go in different order from last to first
-     Ctrl + `    = open terminal , Ctrl + shift + `  --> open new terminal 
-     Ctrl+ shift+ p  -> Command pallete
-     Ctrl + P -> search file names.
-     Ctrl + shift + k  , Ctrl+x  -> delete line 
-     Ctrl + shift + v  - paste code without format.
+    Alt + <-- / -->  || jump between opened files  - more like going back , 
+    Ctrl+tab for jump between opened files, add shift if wanna go in different order from last to first
+    Ctrl + `    = open terminal , Ctrl + shift + `  --> open new terminal 
+    Ctrl+ shift+ p  -> Command pallete
+    Ctrl + P -> search file names.
+    Ctrl + shift + k  , Ctrl+x  -> delete line 
+    Ctrl + shift + v  - paste code without format.
 
+    Ctrl + j -> opens terminal 
+    Ctrl + shift + E -> opens editor files explorer
+    Ctrl + L -> select a line
+    Ctrl + g -> jump to a specific line number
+    Ctrl + D -> find duplicate and replace all occurances       
+    Alt + up/down -> move a line
+    Ctrl + 1 (number) -> switch between split editor windows
+    shift + c + down/up arrow (Column selection - changed myself) to select columns and remove space for
+        To use shift+C -> Shift+c -> keep holding shift n then up and down arrow.
+        Notes: Shift +C will enter into column mode.. then use Shift+arrow key for selection. Press shift+c to exit that column selection mode.
+    Ctrl+ shift + arrow -> for selecting one word and then ctrl + ALT + arrow up/down to keep selection there and replace many occurances at the same indentation
+    Alt + shift + up/down to duplicate a line down or up.
+    Alt + T -> Toggle Terminal -> focus on Terminal in panel
+    Ctrl+shift+` opens a new terminal
+    Ctrl + alt + t -> openInTerminal -> opens a terminal with current directory open 
+    Ctrl + j -> opens a panel with output/terminal
+    Shift + K -> kill the active terminal
+        workbench.action.terminal  terminal.focusAtIndex1 -> Added Shift+1
+    
+    

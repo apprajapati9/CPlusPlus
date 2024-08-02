@@ -63,7 +63,7 @@ class ListNode{
             }
             //cout << "size of list " << size << endl;
             //cout << endl << "last-> " << temp->val << endl;
-            ListNode *newList = new ListNode();
+            ListNode *newList= new ListNode();
             
             for (int i = size; i >= 0; i--) {
             ListNode *t = head; 
@@ -81,24 +81,29 @@ class ListNode{
 
 int main(){
 
-    ListNode first = ListNode();
-    ListNode *head = &first; // address of first is stored in head.
+    // ListNode first = ListNode();
+    // ListNode *head = &first;   //This works too if you want to add and remove notes using first. Difference is that 
+                                    // if you use head pointer then head->MethodName(), for first its first.methodName()
+    ListNode *head = new ListNode(); // address of first is stored in head.
 
-    first.appendNode(head, 9);
-    first.appendNode(head, 19);
-    first.appendNode(head, 190);
-    first.appendNode(head, 199);
-    first.appendNode(head, 1990);
-    first.appendNode(head, 19900);
-    first.appendNode(head, 1990000);
+   // cout << sizeof(*head) << " " << sizeof(first) << " ";
+    //out << sizeof(int) << endl;
+
+    head->appendNode(head, 9);
+    head->appendNode(head, 19);
+    head->appendNode(head, 190);
+    head->appendNode(head, 199);
+    head->appendNode(head, 1990);
+    head->appendNode(head, 19900);
+    head->appendNode(head, 1990000);
     
  
     cout << "printing...//" << endl;
-    first.printNode(head);
+    head->printNode(head);
 
-    head = first.reverseList(head);
+    head = head->reverseList(head);
 
-    first.printNode(head);
+    head->printNode(head);
 
     delete head;   
 }

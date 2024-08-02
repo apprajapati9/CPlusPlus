@@ -53,7 +53,7 @@ class ListNode{
         }
 
         ListNode* reverseList(ListNode *head){
-            ListNode *temp = head; 
+            ListNode *temp = head;
 
             //find last
             int size = 0;
@@ -63,18 +63,25 @@ class ListNode{
             }
             //cout << "size of list " << size << endl;
             //cout << endl << "last-> " << temp->val << endl;
-            ListNode *newList= new ListNode();
-            
+            ListNode *newList = new ListNode();
+
             for (int i = size; i >= 0; i--) {
             ListNode *t = head; 
             for (int j = 0; j < i   ; j++){
                 t = t->next;
             }
-            // cout << "last t-> " << t->val << endl;
+            //cout << "last t-> " << t->val << endl;
+            
             appendNode(newList, t->val);
             }
 
-            return newList;
+            ListNode *deleteFirst = newList;
+            if(newList->next){
+                deleteFirst = newList->next;
+                delete newList;
+            }
+
+            return deleteFirst;
         }
 };
 
@@ -84,25 +91,36 @@ int main(){
     // ListNode first = ListNode();
     // ListNode *head = &first;   //This works too if you want to add and remove notes using first. Difference is that 
                                     // if you use head pointer then head->MethodName(), for first its first.methodName()
-    ListNode *head = new ListNode(); // address of first is stored in head.
+    ListNode *head = new ListNode(1); // address of first is stored in head.
 
    // cout << sizeof(*head) << " " << sizeof(first) << " ";
     //out << sizeof(int) << endl;
 
-    head->appendNode(head, 9);
-    head->appendNode(head, 19);
-    head->appendNode(head, 190);
-    head->appendNode(head, 199);
-    head->appendNode(head, 1990);
-    head->appendNode(head, 19900);
-    head->appendNode(head, 1990000);
+    cout << "Append nodes add a num from 1-1000" << endl;
+    int input = 0;
+    cin >> input;
+    while (input>0 && input < 1000)
+    {
+        head->appendNode(head, input);
+        cin >> input;
+    }
+    
+
+    // head->appendNode(head, 9);
+    // head->appendNode(head, 19);
+    // head->appendNode(head, 190);
+    // head->appendNode(head, 199);
+    // head->appendNode(head, 1990);
+    // head->appendNode(head, 19900);
+    // head->appendNode(head, 1990000);
     
  
-    cout << "printing...//" << endl;
+    cout << "printing...";
     head->printNode(head);
 
     head = head->reverseList(head);
 
+    cout << endl << "Reverse Nodes-> ";
     head->printNode(head);
 
     delete head;   

@@ -131,7 +131,7 @@ VSC
     Ctrl+shift+` opens a new terminal
     Ctrl + alt + t -> openInTerminal -> opens a terminal with current directory open 
     Ctrl + j -> opens a panel with output/terminal
-    Shift + K -> kill the active terminal
-        workbench.action.terminal  terminal.focusAtIndex1 -> Added Shift+1
-    
+    Shift + K -> kill the active terminal 
+        workbench.action.terminal  terminal.focusAtIndex1 -> Added alt+i 
+    F12 -> definition, alt+f12 - peek definition
     

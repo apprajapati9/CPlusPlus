@@ -127,6 +127,9 @@ VSC
         Notes: Shift +C will enter into column mode.. then use Shift+arrow key for selection. Press shift+c to exit that column selection mode.
     Ctrl+ shift + arrow -> for selecting one word and then ctrl + ALT + arrow up/down to keep selection there and replace many occurances at the same indentation
     Alt + shift + up/down to duplicate a line down or up.
+    Alt + shift + forth arrow will select a block of code such as a function with curly braces
+        important - placement of cursor shouldn't be next to a word, otherwise word selection will trigger.
+        if next to a word, then keep pressing to increase the area of selection. 
     Alt + T -> Toggle Terminal -> focus on Terminal in panel
     Ctrl+shift+` opens a new terminal
     Ctrl + alt + t -> openInTerminal -> opens a terminal with current directory open 
@@ -134,4 +137,14 @@ VSC
     Shift + K -> kill the active terminal 
         workbench.action.terminal  terminal.focusAtIndex1 -> Added alt+i 
     F12 -> definition, alt+f12 - peek definition
-    
+    Ctrl + q -> query to open search, explorer and many other options
+    Ctrl+shift+ M -> Terminal - PROBLEMS... problems to check effors and jump to those lines.
+    Ctrl + shift + u -> terminal - OUTPUT 
+    Ctrl + , -> settings
+    Ctrl + shift + L -> editor.action.selectHighlights -> selects all occurances n ability to edit or remove..
+        Ctrl + D - allows you to select in order, but Ctrl+shift+L does select all occurances
+        Ctrl + D  can also be used to select current word without using ctrl+shift+arrow
+    Ctrl+ c -> without any selection just at the start of a line, will copy the entire line and you can paste, just like ctrl +x - cuts without selection
+        alternatives - Alt+shift+arrow up or down
+    Ctrl + l -> selects the entire line and then  () or "" to wrap 
+

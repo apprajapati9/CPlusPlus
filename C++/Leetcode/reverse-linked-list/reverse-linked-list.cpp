@@ -3,125 +3,110 @@
 
 using namespace std;
 
-// struct Node{
-//     int val;
-//     Node *next;
-// };
+struct Node{
+    int val;
+    Node *next;
+};
 
 class ListNode{
     public:
-        int val;
-        ListNode *next;
+        Node *head;
+        int length = 0;
 
         ListNode(){
-            val = 0;
-            next = nullptr;
+            head = nullptr;
         }   
 
-        ListNode(int value){
-            val = value;
-            next = nullptr;
+        int getLength(){
+            return length;
         }
 
-        void appendNode(ListNode* head, int value){
-            ListNode *n = new ListNode(value); // whenever you are in a function, it goes on stack, thus need to create a heap allocated object
-            ListNode *temp = head; // duplicating head
+        void appendNode(int value){
+            Node *n = new Node(); // whenever you are in a function, it goes on stack, thus need to create a heap allocated object
+            n->val = value;
+            n->next = nullptr;
 
-            //This case is necessary because initial node has next pointing to nullptr
-            if(!temp->next){
-                //if null
+            if(head != nullptr) {
+                Node *temp = head;                 
+                while (temp->next) 
+                {
+                    temp = temp->next;
+                }
                 temp->next = n;
-                return;
+
+            }else{
+                head = n;
             }
-            while (temp->next) //9 
-            {
-                //cout << temp->val << endl; //0 
-                temp = temp->next; // 9
-            }
-        
-            temp->next = n;
+            length++;
         }
 
-        void printNode(ListNode *head){
-            ListNode *temp = head;
+        void printNode(){
+            Node *temp = head;
             cout << endl;
-            //cout << "printing fun temp head " << temp->val << endl;
             while(temp){
-                cout << temp->val << "," ;
+                cout << temp->val;
+                if(temp->next) cout << ",";
                 temp = temp->next;
             }
         }
 
-        ListNode* reverseList(ListNode *head){
-            ListNode *temp = head;
+        void reverseList(){
+            Node *temp = head;
+            Node *before = nullptr;
+            Node *after = temp;
 
-            //find last
-            int size = 0;
-            while(temp->next){
-                size++;
-                temp = temp->next;
-            }
-            //cout << "size of list " << size << endl;
-            //cout << endl << "last-> " << temp->val << endl;
-            ListNode *newList = new ListNode();
+            while(temp!=nullptr){
+                after = temp->next;
+                temp->next = before;
+                before = temp;
+                temp = after;
 
-            for (int i = size; i >= 0; i--) {
-            ListNode *t = head; 
-            for (int j = 0; j < i   ; j++){
-                t = t->next;
             }
-            //cout << "last t-> " << t->val << endl;
-            
-            appendNode(newList, t->val);
-            }
+            delete[] temp;
+            head = before;
+        }
 
-            ListNode *deleteFirst = newList;
-            if(newList->next){
-                deleteFirst = newList->next;
-                delete newList;
+        void cleanMemory(){
+            Node *current = head;
+            Node *next = nullptr;
+            while(current){
+                next = current->next;
+                delete current;
+                current = next;
             }
-
-            return deleteFirst;
+            head = nullptr;
+            length = 0;
         }
 };
 
-
-int main(){
-
-    // ListNode first = ListNode();
-    // ListNode *head = &first;   //This works too if you want to add and remove notes using first. Difference is that 
-                                    // if you use head pointer then head->MethodName(), for first its first.methodName()
-    ListNode *head = new ListNode(1); // address of first is stored in head.
-
-   // cout << sizeof(*head) << " " << sizeof(first) << " ";
-    //out << sizeof(int) << endl;
-
+void listFromUser(ListNode* head){
     cout << "Append nodes add a num from 1-1000" << endl;
     int input = 0;
     cin >> input;
     while (input>0 && input < 1000)
     {
-        head->appendNode(head, input);
+        head->appendNode(input);
         cin >> input;
     }
-    
+}
+int main(){
+    ListNode *head = new ListNode(); 
 
-    // head->appendNode(head, 9);
-    // head->appendNode(head, 19);
-    // head->appendNode(head, 190);
-    // head->appendNode(head, 199);
-    // head->appendNode(head, 1990);
-    // head->appendNode(head, 19900);
-    // head->appendNode(head, 1990000);
-    
- 
+    //adding 1.. 10 values in linkedlist.
+    for (int i = 0; i < 10; i++){
+        head->appendNode(i + 1);
+    }
+
     cout << "printing...";
-    head->printNode(head);
+    head->printNode();
 
-    head = head->reverseList(head);
+    head->reverseList();
 
-    cout << endl << "Reverse Nodes-> ";
-    head->printNode(head);
+    cout << endl << endl << "Reverse Nodes-> ";
+    head->printNode();
 
-    delete head;   
+    cout << endl << endl;
+    cout << "length of linkedlist-> "  << head->getLength();
+
+    head->cleanMemory();
 }

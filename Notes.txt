@@ -148,3 +148,5 @@ VSC
         alternatives - Alt+shift+arrow up or down
     Ctrl + l -> selects the entire line and then  () or "" to wrap 
 
+Notes on make files
+    To run make file = make -f `makeFileName`

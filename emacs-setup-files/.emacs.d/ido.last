@@ -1,0 +1,86 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("c:/Users/appra/AppData/Roaming/" . ".emacs.d/")
+ ("c:/Users/appra/AppData/" . "Roaming/")
+ ("c:/Users/appra/" . "AppData/")
+ ("c:/Users/" . "appra/")
+ ("d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/" . "merge-two-sorted-linkedlist/")
+ ("d:/git_projects/algorithms/CPlusPlus/C++/" . "Leetcode/")
+ ("d:/git_projects/algorithms/CPlusPlus/" . "C++/")
+ ("d:/git_projects/algorithms/" . "CPlusPlus/")
+ ("d:/git_projects/" . "algorithms/")
+ ("d:/" . "git_projects/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/merge-two-sorted-linkedlist/"
+ "c:/Users/appra/AppData/Roaming/.emacs.d/"
+ "d:/git_projects/algorithms/CPlusPlus/"
+ "c:/Users/appra/AppData/Roaming/"
+ "~:/"
+ "c:/~:/"
+ "c:/Program Files/Emacs/~./"
+ "d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/"
+ "d:/git_projects/algorithms/"
+ "d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/AddTwoNumbers/"
+ "d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/AddTwoNumbers/simple-c/"
+ "d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/binary_search/"
+ "d:/git_projects/algorithms/CPlusPlus/C++/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "Notes.txt"
+ ".emacs"
+ "main.cpp"
+ "main.c"
+ "NodeIml.cpp"
+ "m.exe"
+ "Node.h"
+ "AddTwoNumbers.cpp"
+ "merge-linked-list.exe"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/merge-two-sorted-linkedlist/" (26430 15975 0 0) "merge-linked-list.o" "merge-linked-list.cpp" "merge-linked-list-breakpoints" "make" "a.out" ".#merge-linked-list.cpp" "#merge-linked-list.cpp#" "../" "./")
+
+ ("d:/git_projects/algorithms/CPlusPlus/" (26430 13834 0 0) "vi_cheat_sheet.pdf" "Notes.txt" "Kotlin/" "C++/" "adb-commands.txt" ".vscode/" ".gitignore" ".git/" "../" "./")
+
+ ("c:/Users/appra/AppData/Roaming/.emacs.d/" (26430 14520 0 0) "url/" "tutorial/" "simpc-mode.el" "recentf" "rc.el" "places" "init.el~" "init.el" "ido.last~" "ido.last" "history" "elpa/" "auto-save-list/" "../" "./")
+
+ ("c:/Users/appra/AppData/Roaming/" (26430 13334 0 0) "WTablet/" "WPersistent/" "WinRAR/" "vlc/" "Visual Studio Setup/" "Sun/" "Postman/" "pensela/" "obs-virtualcam.txt" "obs-studio/" "NVIDIA/" "npm/" "Notepad++/" "Mozilla/" "MiKTeX/" "Microsoft/" "LibreOffice/" "inkscape/" "Google/" "GitHub Desktop/" "GIMP/" "Epic Pen/" "CodeBlocks/" "Code/" "Charles/" "Blackmagic Design/" "Atlassian/" "Adobe/" ".emacs~" ".emacs.d/" ".emacs" "../" "./")
+
+ ("d:/git_projects/android_projects/" (26216 43564 0 0) "temporary/" "temp/" "techyourchance-courses/" "retrofit_course/" "open-source-projects/" "NowinAndroidApp/" "ndk-c++/" "multithreading-course-udemy/" "marvel-app/" "libraries/" "KotlinCoroutineswithArchitectureComponentsLiveDataViewModelLifecycle/" "kotlin-coroutines-and-flow/" "jetpack-compose/" "HiltDi/" "GithubBrowserSamplewithAndroidArchitectureComponents/" "foodyApp/" "feedapp-github/" "fdroid-projects/" "DragNDropTutorial/" "drag-and-drop-sample-master/" "custom-views/" "compose-samples-android/" "architecture-android-git-projects/" "android_animations/" "androidDBSampleApp/" "../" "./")
+
+ ("c:/Users/appra/AppData/" (25684 32430 0 0) "Roaming/" "LocalLow/" "Local/" "../" "./")
+
+ ("c:/Users/appra/" (26429 29302 0 0) "Videos/" "Templates/" "Start Menu/" "SendTo/" "Searches/" "Saved Games/" "Recent/" "PrintHood/" "Postman/" "Pictures/" "OneDrive/" "ntuser.ini" "NTUSER.DAT{8c27c2be-eb29-11ed-a30f-9221e918c6f3}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{8c27c2be-eb29-11ed-a30f-9221e918c6f3}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{8c27c2be-eb29-11ed-a30f-9221e918c6f3}.TM.blf" "NTUSER.DAT{67faf610-f4b0-11ed-a316-009337dca618}.TMContainer00000000000000000002.regtrans-ms" "NTUSER.DAT{67faf610-f4b0-11ed-a316-009337dca618}.TMContainer00000000000000000001.regtrans-ms" "NTUSER.DAT{67faf610-f4b0-11ed-a316-009337dca618}.TM.blf" "ntuser.dat.LOG2" "ntuser.dat.LOG1" "NTUSER.DAT" "NetHood/" "My Documents/" "Music/" "miktex-console.lock" "mercurial.ini" "Local Settings/" "Links/" "Favorites/" "Downloads/" "Documents/" "Cookies/" "Contacts/" "Application Data/" "AppData/" "ansel/" "3D Objects/" ".vscode/" ".viminfo" ".ssh/" ".skiko/" ".rustup/" ".minttyrc" ".m2/" ".lldb/" ".lesshst" ".kotlinc_history" ".jsontokotlin/" ".javacpp/" ".gradle/" ".gnupg/" ".gitconfig" ".emulator_console_auth_token" ".emacs.d/" ".dbus-keyrings/" ".cargo/" ".cache/" ".bash_history" ".angular-config.json" ".android/" "../" "./")
+
+ ("c:/Users/" (26267 15578 0 0) "Public/" "desktop.ini" "Default User/" "Default/" "appra/" "All Users/" "../" "./")
+
+ ("d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/AddTwoNumbers/" (26429 37534 0 0) "simple-c/" "NodeIml.o" "NodeIml.cpp" "Node.h" "make~" "make" "AddTwoNumbers.o" "AddTwoNumbers.cpp" "../" "./")
+
+ ("d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/AddTwoNumbers/simple-c/" (26429 27687 0 0) "make" "main.o" "main.cpp~" "main.cpp" "a.out" "../" "./")
+
+ ("d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/binary_search/" (26429 27172 0 0) "make" "FirstAndLastPositionOfElement.o" "FirstAndLastPositionOfElement.cpp" "binarySearch.o" "binarySearch.exe" "binarySearch.cpp" "binary-search-recursion.o" "binary-search-recursion.exe" "binary-search-recursion.cpp" "../" "./")
+
+ ("d:/git_projects/algorithms/CPlusPlus/C++/Leetcode/" (26429 26003 0 0) "valid-sudoku/" "valid-anagrams/" "TwoSum/" "TopKFrequentElement/" "t.exe" "swap_text.cpp" "sort/" "s.exe" "RomanToInteger/" "reverse-string.cpp" "reverse-linked-list/" "r.exe" "ProductArrayExceptItselft/" "Palindrome/" "merge-two-sorted-linkedlist/" "merge-strings-alternatively/" "kth-largest-element/" "IsPalindrome-string/" "gcd-of-strings/" "encode-decode-strings/" "DiagonalSum/" "DiagonalDifference/" "contains-duplicate/" "binary_search/" "anagram-groups/" "AddTwoNumbers2/" "AddTwoNumbers/" "../" "./")
+
+ ("d:/git_projects/algorithms/CPlusPlus/C++/" (26316 43863 0 0) "p-problems.txt" "lerp/" "Leetcode/" "hackerrank/" "graphics/" "C++ basics/" "basic_problems/" "algorithms/" "../" "./")
+
+ ("d:/git_projects/algorithms/" (25702 48293 0 0) "CPlusPlus/" "../" "./")
+
+ ("d:/git_projects/" (26316 51072 0 0) "bezier-curve/" "android_projects/" "algorithms/" "../" "./")
+
+ ("c:/Program Files/" (26428 64094 0 0) "WinRAR/" "WindowsPowerShell/" "WindowsApps/" "Windows Sidebar/" "Windows Photo Viewer/" "Windows NT/" "Windows Media Player/" "Windows Mail/" "Windows Defender/" "Tablet/" "Reference Assemblies/" "obs-studio/" "NVIDIA Corporation/" "Notepad++/" "nodejs/" "MSBuild/" "Mozilla Firefox/" "ModifiableWindowsApps/" "Microsoft Visual Studio/" "Microsoft Update Health Tools/" "Logitech/" "Logi/" "Java/" "Internet Explorer/" "Intel/" "Inkscape/" "Git/" "Emacs/" "dotnet/" "desktop.ini" "Common Files/" "Charles/" "Blackmagic Design/" "Application Verifier/" "Android/" "../" "./")
+
+ ("c:/Program Files/Emacs/" (26428 64108 0 0) "Uninstall.exe" "emacs-29.3_2/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

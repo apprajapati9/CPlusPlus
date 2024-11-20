@@ -150,3 +150,44 @@ VSC
 
 Notes on make files
     To run make file = make -f `makeFileName`
+
+-> Interactively run (When c++ program asks for an input) a program use this command:
+   Cu Mx compile make -f `makeFileName`
+   if done with Mx, doesn't work.
+
+-> Other useful commands
+   Cx d -> browse through directory
+   Cx Cf -> files
+   Cx Cs -> save file
+   Cx d :/ to go to home directory in case to change .emacs files.
+   Cx d d:/ to get to other drive directory
+   Mx recentf-open-files - to open recently opened files.
+   Mx recompile to rerun the code in compilation mode.
+   Navigate through buffers Cx Cb -> possible another way to check opened files in emacs and navigate through it.
+-> gdb mode
+   Mx Gdb
+   watch var -> to watch
+   p var -> to print
+   b 11 -> break point at that line number
+   run -> run the program.
+   c - continue
+   s -> step through
+   display var
+   
+
+   --To save and restore breakpoints in gdb
+   save-breakpoints fileName
+   source fileName 
+   
+
+-> Copy line
+   C space -> turn on selection
+   Get to end or start of a line by C a / C e
+   then CSpace
+   C e / C a either side you want selection to go
+   M w to copy the region
+   C y yank (paste)
+
+-> Buffer
+   Cx Cb -> buffers
+   jump between opened buffers - Cx left/right arrow.

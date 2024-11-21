@@ -191,3 +191,43 @@ Notes on make files
 -> Buffer
    Cx Cb -> buffers
    jump between opened buffers - Cx left/right arrow.
+
+-> Comment a block of code
+   Mx comment-region
+   Mx uncomment-region
+
+-> Editor zoom / unzoom
+   Cx + C+ zoom, C- unzoom
+
+-> creating directory
+   Cx d -> move to directory
+   at the end in empty area, + to add a new directory
+   m - > mark a file
+   Shift + c ->copy
+   Shift + d ->delete
+
+-> Cu C-space OR CxCxCg to get back again
+   CxCxCg does not change the mark ring.
+   Cx Cspace- jumps between multiple files, using mark ring.
+   Cx Cx swaps point and mark and activtes the region. Cg then deactives the region.
+
+-> increment number lines
+   Cx space to select column
+   Mx rectangle-number-lines to add 1.. n numbers in column
+
+   Cx space to select column then
+   Mx string-rectangle to add any character you want.
+   ----> string-rectangle replace that function with C t -> will run the string-rectangle function.
+
+   USING macro to achieve the same
+   F3 or Cx (  - record macro 
+   navigate to each ( (open bracket) and insert 1 or desired number
+   F4 or Cx ) to stop recording macro
+   Cx e  -> to RUN the macro.
+
+   Cx r N -> also single command that can add 1 ... n based on selection. Basically same as rectangle-number-lines but with one single command
+
+-> Rectangle charater replace Cc r
+-> delete current line -> C + Shift + Del/ backspace.
+
+

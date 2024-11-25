@@ -192,7 +192,8 @@ LinkedList* mergedList(Node* node1, Node* node2){
 
     while(node1 && node2){
 	if(node1->val < node2->val){
-
+	    // It is important to rememeber that no need to manually manipulate node's value.
+	    // Doing node->next = node1, will save the entire node, thus no need of doing node->val = node
 	    node->appendNode(node1->val);
 	    node1 = node1->next;
 	}else{

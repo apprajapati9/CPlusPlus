@@ -173,7 +173,8 @@ Notes on make files
    c - continue
    s -> step through
    display var
-   
+
+   p *arr@[3] size to print an array
 
    --To save and restore breakpoints in gdb
    save-breakpoints fileName
@@ -229,5 +230,4 @@ Notes on make files
 
 -> Rectangle charater replace Cc r
 -> delete current line -> C + Shift + Del/ backspace.
-
-
+-> Gdb tutorial for emacs - onestepcode.com/debugging-c-gdb-emacs 

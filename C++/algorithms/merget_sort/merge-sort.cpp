@@ -74,12 +74,12 @@ void mergeSort(int *arr, int start, int end, int size)
 }
 
 //Just a practice to print in reverse using recursion.
-void printReverse(int *arr, int value, int size)
+void printReverse(int *arr, int index, int size)
 {
-    if(value < size) {
-        printReverse(arr, value + 1, size);
+    if(index < size) {
+        printReverse(arr, index + 1, size);
     }
-    cout << arr[value] << ",";
+    cout << arr[index] << ",";
 }
 
 int main()
@@ -101,7 +101,6 @@ int main()
     cout << "Sorted array:: " << endl;
     for(int i = 0; i < size; i++) {
         cout << arr[i] << ",";
-
     }
 
     cout << endl << endl;

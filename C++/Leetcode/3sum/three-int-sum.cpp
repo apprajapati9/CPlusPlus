@@ -1,5 +1,5 @@
 #include <iostream>
-#include <unordered_set>
+#include <unordered_map>
 
 using namespace std;
 
@@ -65,14 +65,12 @@ void sort(int *arr, int start, int end, int mid)
         }
     }
 
-
     if(s1>0) {
         for(int i=0; i< s1; i++) {
             mergedArr[index] = arr[first];
             first++;
             index++;
         }
-        cout << endl;
     }
     if(s2>0) {
         for(int i=0; i< s2; i++) {
@@ -80,10 +78,7 @@ void sort(int *arr, int start, int end, int mid)
             second++;
             index++;
         }
-        cout << endl;
     }
-
-
 
     int j = 0;
     for(int i = start; i <= end; i++) {
@@ -108,39 +103,62 @@ void mergeSort(int * arr, int start, int end, int size)
     }
 }
 
-
-
-int main()
+string arrToString(int* arr, int size)
 {
-    int arr[] = {-1,0,1,2,-1,-4};
-    int size = sizeof(arr) / sizeof(int);
+    string str = "";
 
-    unordered_set<int> set;
+    bool isNegative = false;
+    string currentStr = "";
 
-    for(int i = 0; i < size; i++) {
-        for(int j = i+1; j < size; j++) {
+    for(int i= 0; i < size; i++) {
 
-            for(int k = 0; k < size; k++) {
-
-                if(k != i && k != j) {
-
-                    if(arr[i] + arr[j] + arr[k] == 0) {
-                        int ijk[3] = {arr[i], arr[j], arr[k]};
-                        mergeSort(ijk, 0, 3-1, 3);
-                        for(auto i : ijk) {
-                            cout << i << ", ";
-                        }
-                    }
-                }
-            }
+        int num = arr[i];
+        if(num < 0) {
+            currentStr += "-";
+            num = -num; // turn to positive.
         }
+
+
+        // 123.. 10/3, 100/23, 1000/1
+        int divisor = 1;
+        int n = num;
+        while(n >= 10) {
+            n = n / 10; // 123/10
+            divisor *= 10;
+        }
+
+
+        if(divisor > 1) {
+            int save = num;
+
+            while(divisor > 0) {
+                int r = save / divisor; // 123/100 = 1
+                save %= divisor; // 12
+                currentStr += (r + '0');
+                divisor /= 10;
+            }
+            if(i != size-1) currentStr += ",";
+        } else {
+            currentStr += (num + '0');
+            if(i != size-1) currentStr += ",";
+        }
+
+        str += currentStr;
+
+        currentStr = "";
+        isNegative = false;
     }
 
+    return str;
+}
+
+void testMergeSort()
+{
     //Important note: when you return an array from a function, the array decays into a pointer. This means
     // sizeof() operator will give the size of the pointer, not size of original array thus result will be wrong.
     // int size2 = sizeof(string)/sizeof(int);
 
-    int array[] =   {4,3,2,9,8,6,1,2}; //{2,1,3,8,1,8,6,4,4,- 100, -1,3,-1,5,1}; //{8,6,1,7,3,2}; // {2,1,3,8,6,4,5};
+    int array[] =   {10,-20,15,5,25,-10,-5}; //{4,3,2,9,8,6,1,2}; //{2,1,3,8,1,8,6,4,4,- 100, -1,3,-1,5,1}; //{8,6,1,7,3,2}; // {2,1,3,8,6,4,5};
     int arrSize = sizeof(array)/ sizeof(int);
 
 
@@ -149,6 +167,48 @@ int main()
     for(int i = 0 ; i < arrSize; i++) {
         cout << array[i] << ",";
     }
+
+}
+
+int main()
+{
+    int arr[] = {-30,-20,15,10,-10,20,25};//{10,-20,15,5,25,-10,-5}; //{-1,0,1,2,-1,-4};
+    int size = sizeof(arr) / sizeof(int);
+
+    unordered_map<string, int> map;
+
+    for(int i = 0; i < size; i++) {
+        for(int j = i+1; j < size; j++) {
+
+            for(int k = j; k < size; k++) {
+
+                if(k != i && k != j) {
+
+                    if(arr[i] + arr[j] + arr[k] == 0) {
+                        int ijk[3] = {arr[i], arr[j], arr[k]};
+
+                        mergeSort(ijk, 0, 3-1, 3);
+
+                        string s =  arrToString(ijk, 3);
+                        map[s] = 1;
+                    }
+                }
+            }
+        }
+    }
+
+    cout << "Array: " << endl;
+    for(auto i : arr) {
+        cout << i << ",";
+    }
+    cout << endl << endl;
+    cout << "Unique triplets: " << endl;
+    for(auto i: map) {
+        cout << i.first << endl;
+    }
+
+    //Uncomment to test merge algorithm
+    //testMergeSort();
 
     return 0;
 }

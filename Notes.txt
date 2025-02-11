@@ -148,6 +148,8 @@ VSC
         alternatives - Alt+shift+arrow up or down
     Ctrl + l -> selects the entire line and then  () or "" to wrap 
 
+==================== EMACS =======================
+
 Notes on make files
     To run make file = make -f `makeFileName`
 
@@ -249,7 +251,7 @@ Notes on make files
 (load-file "D:/emacs_settings/.emacs")
 
  ========= Add following in .emacs file to set custom location for .emads.d dir and load custom .emacs file. ========
-
+ ======== .emacs default file usually located in c:/users/appra/AppData/Roaming/.emacs
 
 (setq user-emacs-directory "D:/emacs_settings/.emacs.d/")
 (setq package-user-dir (expand-file-name "elpa/" user-emacs-directory))
@@ -268,5 +270,14 @@ Notes on make files
 (setq default-directory "D:/")
 (load user-init-file)
 
-
 //////////////////////////////////////// END of .emacs file to set custom file paths for .emacs file and .emads.d directory
+
+C-M-j - to move a line down (place cursor at the start of a line)
+
+C-h b - to look for all key bindings of emacs with Mx commands.
+
+C-S-n - next occurences in multiple cursors.
+C-k is cut line, doesn't work on multiple selection lines. C-y paste.
+
+
+

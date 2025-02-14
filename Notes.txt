@@ -279,5 +279,6 @@ C-h b - to look for all key bindings of emacs with Mx commands.
 C-S-n - next occurences in multiple cursors.
 C-k is cut line, doesn't work on multiple selection lines. C-y paste.
 
+in Dired mode, you can mark and then use R which asks to rename but also use to move file to another directory
 
 

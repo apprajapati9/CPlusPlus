@@ -18,6 +18,9 @@ void print(int *a, int size)
 }
 
 
+/*
+Best case: On, worst-case, avg case - On2
+*/
 void insertionSort(int *arr, int size)
 {
 

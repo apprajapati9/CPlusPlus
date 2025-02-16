@@ -66,7 +66,6 @@ int main()
     int size1 = sizeof(a)/ sizeof(a[0]);
     int size2 = sizeof(b)/ sizeof(b[0]);
 
-
     int *m = merger(a, size1, b, size2);
 
     for(int i =0 ; i < size1+ size2; i++) {

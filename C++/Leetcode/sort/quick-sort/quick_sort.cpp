@@ -2,14 +2,15 @@
 
 using namespace std;
 
-int partition(int *A, int start, int end){
+int partition(int *A, int start, int end)
+{
 
     int pivot = A[end];
     int partitionIndex = start;
 
-    for(int i= start; i < end; i++){
-        
-        if(A[i] <= pivot){
+    for(int i= start; i < end; i++) {
+
+        if(A[i] <= pivot) {
             swap( A[i], A[partitionIndex]);
             partitionIndex++;
         }
@@ -19,8 +20,9 @@ int partition(int *A, int start, int end){
     return partitionIndex;
 }
 
-void quickSort(int *A, int start, int end){
-    if( start < end){
+void quickSort(int *A, int start, int end)
+{
+    if( start < end) {
 
         int partitionIndex= partition(A, start, end);
         quickSort(A, start,partitionIndex - 1);
@@ -29,10 +31,13 @@ void quickSort(int *A, int start, int end){
 }
 
 
-int main(){
+int main()
+{
     int A[] = {7, 2, 1, 6, 8, 5, 3, 4};
 
     quickSort(A, 0, 7);
 
-    for(int i = 0; i < 8; i++) cout << A[i] <<" ";
+    for(int i = 0; i < 8; i++) {
+        cout << A[i] <<" ";
+    }
 }

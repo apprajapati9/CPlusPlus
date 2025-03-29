@@ -213,6 +213,8 @@ LinkedList* mergedList(Node* node1, Node* node2){
 
 int main(){
 
+
+    //Test case : [-9,3] and [5,7] = [-9,3,5,7]
     LinkedList *list1 = new LinkedList();
 
     list1->appendNode(1);

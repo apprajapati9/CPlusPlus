@@ -281,3 +281,19 @@ C-k is cut line, doesn't work on multiple selection lines. C-y paste.
 
 in Dired mode, you can mark and then use R which asks to rename but also use to move file to another directory
 
+;; Look into transporting text - Transpose
+C-t - transpose two chars
+M-t -> transpose two words - useful 
+Cx-Ct -> transpose two lines
+CMt -> transpose two balanced expressions 
+
+M-d -> delete forward (from cursor to end of word)
+M-backspace -> delete backward (from cursor at any point i.e lets say middle of a word to beginning)
+	    "ajay", if cursor is at j then only delete "a", M-d is opposite in reverse
+
+
+//////////////////////// Typescript setup
+npm --init  -> to start the project
+npm install --save-dev typescript -> to install typescript
+npx tsc --init  -> to generate tsconfig file
+npx tsc --watch -> to start watching the project
